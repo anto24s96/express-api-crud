@@ -6,7 +6,7 @@ const postsRouter = require("./routers/postsRouter.js");
 const notFoundHandler = require("./middlewares/notFoundHandle.js");
 const errorHandler = require("./middlewares/errorHandler.js");
 
-//middlewares generici
+//Middlewares generici
 app.use(express.json());
 
 //Rotte
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.use("/posts", postsRouter);
 
-//middlewares per la gestione degli errori
+//Middlewares per la gestione degli errori
 app.use(errorHandler);
 app.use(notFoundHandler);
 
